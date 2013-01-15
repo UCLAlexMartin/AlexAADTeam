@@ -11,13 +11,15 @@ public class CompareHash {
 		String hashres;
 		//n = "myPassword";
 		Hash h = new Hash();
-		res = h.hashInputPassword(name, savedPassword);
-		hashres = h.hashInputPassword(name, password); // because we have no database
+		hashres = h.hashInputPassword(name, password);
+		res = h.hashSavedPassword(name, savedPassword);
+		 // because we have no database
 		//to compare hashes with, i hash two passwords and compare them for now
-		
-		//not sure the salt should be hard coded into the function the way i did?
+	
 		System.out.println("login hash: " + res);
 		System.out.println("saved hash: " + hashres);
+		System.out.println("salt 1: "+ h.salt);
+		System.out.println("salt 2: "+ Hash.salt1);
 		
 		//if (hasres == res) did not work so had to use CompareTo function
 		if ( res.compareTo(hashres) == 0){
