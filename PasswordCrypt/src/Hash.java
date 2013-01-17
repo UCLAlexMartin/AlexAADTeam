@@ -2,7 +2,6 @@
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Random;
 
 
 
@@ -13,8 +12,14 @@ public class Hash {
 	 * @return a random salt
 	 */
 	public static String createSalt(){
-		Random rand = new Random();
-		return String.valueOf(rand.nextInt(3000));
+	    String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+	    String salt = "";
+	    for(int x=0;x<10;x++)
+	    {
+	       int i = (int)Math.floor(Math.random() * 62);
+	       salt += chars.charAt(i);
+	    }
+		return salt;
 	}
 	
 	/**
