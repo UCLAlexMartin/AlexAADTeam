@@ -8,6 +8,7 @@ REST Web Service that retrieves data from a MySQL database table/s based on a GE
 Dynamic Web page that is influenced by information from a REST Web Service e.g. A dynamicly generated HTML table.
 REST Web Service that insterts into a MySQL database table/s based on a POST message.
 REST Web Service that insterts into a MySQL database table/s based on a PUT message.
+Work out how to limit access to REST services to only validated users and prototype.
 
 
 /*LOWER PRIORITY*/
